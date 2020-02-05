@@ -175,10 +175,10 @@ module.exports = function(
   const templateScripts = templatePackage.scripts || templateJson.scripts || {};
   appPackage.scripts = Object.assign(
     {
-      start: 'react-scripts start',
-      build: 'react-scripts build',
-      test: 'react-scripts test',
-      eject: 'react-scripts eject',
+      start: 'react-scripts-ecpair start',
+      build: 'react-scripts-ecpair build',
+      test: 'react-scripts-ecpair test',
+      eject: 'react-scripts-ecpair eject',
     },
     templateScripts
   );
@@ -297,7 +297,7 @@ module.exports = function(
   }
 
   // Install react and react-dom for backward compatibility with old CRA cli
-  // which doesn't install react and react-dom along with react-scripts
+  // which doesn't install react and react-dom along with react-scripts-ecpair
   if (!isReactInstalled(appPackage)) {
     args = args.concat(['react', 'react-dom']);
   }
