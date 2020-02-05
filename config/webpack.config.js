@@ -240,6 +240,7 @@ module.exports = function(webpackEnv) {
             },
             mangle: {
               safari10: true,
+              reserved: ["BigInteger","ECPair","Point"],
             },
             // Added for profiling in devtools
             keep_classnames: isEnvProductionProfile,
